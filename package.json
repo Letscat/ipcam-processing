@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Letscat/ipcam-processing#readme",
   "dependencies": {
+    "jsmpeg": "^1.0.0",
     "node-onvif": "^0.1.7",
+    "node-rtsp-stream": "0.0.9",
     "onvif": "github:agsh/onvif"
   }
 }
