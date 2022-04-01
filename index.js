@@ -29,10 +29,10 @@ new Cam({
         '</body></html>');
 
         
-        
-        player = new JSMpeg.Player('ws://localhost:9999', {
+        /*
+        player = new jsmpeg.Player('ws://localhost:9999', {
           canvas: document.getElementById('canvas') // Canvas should be a canvas DOM element
-        })	
+        })	*/
         
     }).listen(443);
   });
