@@ -1,0 +1,23 @@
+{
+  "name": "ipcam-processing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ipcam"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Letscat/ipcam-processing.git"
+  },
+  "author": "Michael.Schmid et al",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Letscat/ipcam-processing/issues"
+  },
+  "homepage": "https://github.com/Letscat/ipcam-processing#readme",
+  "dependencies": {
+    "node-onvif": "^0.1.7",
+    "onvif": "github:agsh/onvif"
+  }
+}
