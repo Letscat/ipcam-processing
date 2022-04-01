@@ -9,15 +9,14 @@ new Cam({
 }, function(err) {
   this.absoluteMove({x: 1, y: 1, zoom: 1});
   this.getStreamUri({protocol:'RTSP'}, function(err, stream) {
-
     http.createServer(function (req, res) {
       res.writeHead(200, {'Content-Type': 'text/html'});
-      res.write('<html><body>' + stream.uri +
-        '<embed type="application/x-vlc-plugin" target="' + stream.uri + '"></embed>' +
-        '<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" name="vlc" width="720" height="780" target="rtsp://192.168.1.96:554/live0.264" />'+
+      res.end('<html><body>' + stream.uri+
+        '<p></p><embed type="application/x-vlc-plugin" target="' + stream.uri + '"></embed>' +
+        
         '</body></html>');
         
-    }).listen(80);
+    }).listen(443);
   });
 });
 
