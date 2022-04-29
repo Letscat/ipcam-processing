@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      Stream URI: <%= temp %>
+
+      <html><body><p></p><embed type="application/x-vlc-plugin" target="<%= temp %>"></embed>'
+    </div>
+
+    <input type="button" id="f1" value="relay" onclick="f1()">
+    <input type="button" id="f2" value="relay" onclick="f2()">
+
+  </div>
+    
+</body>
+
+</html>
+<script>
+  function f1() {
+      var wnd = window.open("http://192.168.1.4/30000/01");
+      setTimeout(() => { wnd.close(); }, 250);
+  }
+  
+  function f2() {
+      var wnd = window.open("http://192.168.1.4/30000/00");
+      setTimeout(() => { wnd.close(); }, 250);
+  }
+  
+  
+  </script>
